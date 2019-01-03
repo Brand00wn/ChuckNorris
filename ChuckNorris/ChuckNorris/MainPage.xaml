@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ChuckNorris"
-             x:Class="ChuckNorris.MainPage">
+             x:Class="ChuckNorris.MainPage"
+             BackgroundColor="#464646">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Image Source="drawable/chucknorris_logo.png" WidthRequest="300" VerticalOptions="CenterAndExpand"></Image>
+            <Editor Text="" x:Name="value" AutoSize="TextChanges" FontFamily="Impact" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#e66811"></Editor>
+        </StackLayout>
+        <Button Text="GENERATE A CHUCK PRAY" Clicked="Button_Clicked" BackgroundColor="#e66811" FontFamily="Impact" FontAttributes="Bold" VerticalOptions="EndAndExpand"></Button>
     </StackLayout>
 
 </ContentPage>
